@@ -1,20 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {AppService} from './app.service';
-import {HttpModule} from '@angular/http';
+import {ImageService} from './services/image.service';
 
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './navbar.component';
+import { GallerComponent } from './galler/galler.component';
+import { ImageListComponent } from './galler/image-list/image-list.component';
+import { ImageComponent } from './galler/image-list/image.component';
+import { ImageDetailComponent } from './galler/image-detail/image-detail.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    GallerComponent,
+    ImageListComponent,
+    ImageComponent,
+    ImageDetailComponent
   ],
   imports: [
-    BrowserModule,
-    HttpModule
+    BrowserModule
   ],
-  providers: [AppService],
+  providers: [ImageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
