@@ -8,8 +8,11 @@ import { Image } from '../../../models/image';
 
 })
 export class ImageComponent implements OnInit {
-  @Input() image: Image;
-  constructor() { }
+  @Input() movie: any;
+  base_url: string;
+  constructor() {
+    this.base_url = 'https://image.tmdb.org/t/p/w500_and_h281_bestv2';
+  }
 
   ngOnInit() {
   }

@@ -11,19 +11,18 @@ import { MovieService } from '../../services/movie.service';
 
 export class ImageListComponent implements OnInit {
 
-  images: Image[] = [];
-  selectedImage: Image;
-  movies: Object[];
+  selectedMovie: any;
+  movies: any[];
 
-  constructor(private imageService: ImageService, private movieService: MovieService) {
+  constructor(private movieService: MovieService) {
     this.loadMovies();
    }
 
   ngOnInit() {
-    this.images = this.imageService.getImages();
+
   }
-  onSelect(image: Image) {
-    this.selectedImage = image;
+  onSelect(movie: any) {
+    this.selectedMovie = movie;
   }
 
   loadMovies(): void {

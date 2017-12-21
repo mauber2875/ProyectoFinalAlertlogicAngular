@@ -1,12 +1,12 @@
-<div *ngIf="selectedImage">
+<div *ngIf="selectedMovie">
   <div class="container image-detail">
     <div class="row">
       <div class="col-sm-8 col-xs-12">
-        <img [src]="selectedImage.imageLink" class="img-responsive">
+        <img src="{{image_base_url}}{{selectedMovie.poster_path}}" class="img-responsive">
       </div>
       <div class="col-sm-4 col-xs-12">
-        <h1>{{selectedImage.title}}</h1>
-        <p>{{selectedImage.description}}</p>
+        <h1>{{selectedMovie.title}}</h1>
+        <p>{{selectedMovie.overview}}</p>
       </div>
     </div>
   </div> 

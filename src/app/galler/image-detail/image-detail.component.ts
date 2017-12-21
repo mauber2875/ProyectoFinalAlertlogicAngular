@@ -7,8 +7,12 @@ import {Image} from '../../models/image';
   styleUrls: ['./image-detail.component.css']
 })
 export class ImageDetailComponent implements OnInit {
-    @Input() selectedImage: Image;
-  constructor() { }
+  @Input() selectedMovie: any;
+
+  image_base_url: string;
+  constructor() { 
+    this.image_base_url = 'https://image.tmdb.org/t/p/w500_and_h281_bestv2';
+  }
 
   ngOnInit() {
   }
