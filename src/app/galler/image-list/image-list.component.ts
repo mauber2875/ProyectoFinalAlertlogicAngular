@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Image} from '../../models/image';
-import {ImageService} from '../../services/image.service';
+import { ImageService } from '../../services/image.service';
+import { MovieService } from '../../services/movie.service';
 
 @Component({
   selector: 'mao-image-list',
@@ -10,9 +11,13 @@ import {ImageService} from '../../services/image.service';
 
 export class ImageListComponent implements OnInit {
 
-    images: Image[] = [];
-    selectedImage: Image;
-    constructor(private imageService: ImageService) { }
+  images: Image[] = [];
+  selectedImage: Image;
+  movies: Object[];
+
+  constructor(private imageService: ImageService, private movieService: MovieService) {
+    this.loadMovies();
+   }
 
   ngOnInit() {
     this.images = this.imageService.getImages();
@@ -21,4 +26,15 @@ export class ImageListComponent implements OnInit {
     this.selectedImage = image;
   }
 
+  loadMovies(): void {
+    this.movieService.getMovies().subscribe(
+      response => {
+        console.log('movies from api', response.results);
+        this.movies = response.results;
+      },
+      error => {
+        console.log('some error has ocurred', error);
+      }
+    );
+  }
 }
