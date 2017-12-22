@@ -1,0 +1,14 @@
+<div *ngIf="selectedActor">
+    <div class="container image-detail">
+      <div class="row">
+        <div class="col-sm-8 col-xs-12">
+          <img src="{{image_base_url}}{{selectedActor.profile_path}}" class="img-responsive">
+        </div>
+        <div class="col-sm-4 col-xs-12">
+          <h1>{{selectedActor.name}}</h1>
+          <!-- <p>{{selectedActor.known_for[0]}}</p> -->
+          
+        </div>
+      </div>
+    </div> 
+  </div>

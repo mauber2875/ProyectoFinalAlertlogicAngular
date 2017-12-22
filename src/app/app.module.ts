@@ -14,6 +14,7 @@ import { ImageDetailComponent } from './galler/image-detail/image-detail.compone
 
 import { MovieService } from './services/movie.service';
 import { ActorsComponent } from './actors/actors.component';
+import { ImageActorDetailComponent } from './actors/image-actor-detail/image-actor-detail.component';
 
 
 
@@ -28,6 +29,7 @@ import { ActorsComponent } from './actors/actors.component';
     ImageComponent,
     ImageDetailComponent,
     ActorsComponent,
+    ImageActorDetailComponent,
     ],
   imports: [
     routes,
