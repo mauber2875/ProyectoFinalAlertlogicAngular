@@ -13,8 +13,11 @@ import { ImageDetailComponent } from './galler/image-detail/image-detail.compone
 
 
 import { MovieService } from './services/movie.service';
+import {ActorService } from './services/actor.service';
 import { ActorsComponent } from './actors/actors.component';
 import { ImageActorDetailComponent } from './actors/image-actor-detail/image-actor-detail.component';
+import { ImageActorListComponent } from './actors/image-actor-list/image-actor-list.component';
+import { ImageActorComponent } from './actors/image-actor-list/image-actor/image-actor.component';
 
 
 
@@ -30,13 +33,15 @@ import { ImageActorDetailComponent } from './actors/image-actor-detail/image-act
     ImageDetailComponent,
     ActorsComponent,
     ImageActorDetailComponent,
+    ImageActorListComponent,
+    ImageActorComponent,
     ],
   imports: [
     routes,
     BrowserModule,
     HttpModule
   ],
-  providers: [ImageService, MovieService],
+  providers: [ImageService, MovieService, ActorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

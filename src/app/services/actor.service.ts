@@ -3,7 +3,7 @@ import { Http, Response, URLSearchParams } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
-export class MovieService {
+export class ActorService {
 
   theMovieUrl: string;
   apiKey: string;
@@ -13,7 +13,7 @@ export class MovieService {
     this.apiKey = '8230c7ea8cb40f6fd40f8851a920b7bf';
   }
 
-  getMovies(): Observable<any> {
+  getActors(): Observable<any> {
     const discover = 'person/popular';
     const params = new URLSearchParams();
 
