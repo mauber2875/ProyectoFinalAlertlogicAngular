@@ -1,8 +1,7 @@
-import {routes} from './app.routes';
+import { routes } from './app.routes';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {ImageService} from './services/image.service';
-import {HttpModule} from '@angular/http';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent} from './navbar/navbar.component';
@@ -13,15 +12,11 @@ import { ImageDetailComponent } from './galler/image-detail/image-detail.compone
 
 
 import { MovieService } from './services/movie.service';
-import {ActorService } from './services/actor.service';
+import { ActorService } from './services/actor.service';
 import { ActorsComponent } from './actors/actors.component';
 import { ImageActorDetailComponent } from './actors/image-actor-detail/image-actor-detail.component';
 import { ImageActorListComponent } from './actors/image-actor-list/image-actor-list.component';
 import { ImageActorComponent } from './actors/image-actor-list/image-actor/image-actor.component';
-
-
-
-
 
 @NgModule({
   declarations: [
@@ -41,7 +36,7 @@ import { ImageActorComponent } from './actors/image-actor-list/image-actor/image
     BrowserModule,
     HttpModule
   ],
-  providers: [ImageService, MovieService, ActorService],
+  providers: [ MovieService, ActorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

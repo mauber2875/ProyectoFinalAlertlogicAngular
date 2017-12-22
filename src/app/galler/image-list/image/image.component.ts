@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Image } from '../../../models/image';
 
 @Component({
   selector: 'mao-image',
