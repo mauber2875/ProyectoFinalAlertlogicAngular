@@ -6,9 +6,10 @@
       </div>
       <div class="col-sm-4 col-xs-12">
         <h1>{{selectedMovie.title}}</h1>
+        <h3>Overview</h3>
         <p>{{selectedMovie.overview}}</p>
-        <h2>Vote average:{{selectedMovie.vote_average | number}}</h2>
-        <h2>Release date:{{selectedMovie.release_date | date}}</h2>
+        <p><strong>Vote average </strong> <small>{{selectedMovie.vote_average | number}}</small></p>
+        <p><strong>Release date </strong> <small>{{selectedMovie.release_date | date}}</small></p>
       </div>
     </div>
   </div> 

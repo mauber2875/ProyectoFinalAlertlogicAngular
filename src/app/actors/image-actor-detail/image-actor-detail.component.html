@@ -6,7 +6,11 @@
         </div>
         <div class="col-sm-4 col-xs-12">
           <h1>{{selectedActor.name}}</h1>
-          <!-- <p>{{selectedActor.known_for[0]}}</p> -->
+          <h5><strong >Known for:</strong></h5>
+          <div *ngFor="let movie of selectedActor.known_for">
+            <p>{{movie.original_title}}</p>
+          </div>
+          
           
         </div>
       </div>
