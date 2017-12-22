@@ -9,7 +9,7 @@ export class MovieService {
   apiKey: string;
 
   constructor(private http: Http) {
-    this.theMovieUrl = 'http://api.themoviedb.org/3/';
+    this.theMovieUrl = 'https://api.themoviedb.org/3/';
     this.apiKey = '8230c7ea8cb40f6fd40f8851a920b7bf';
   }
 
